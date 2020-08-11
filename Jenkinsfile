@@ -17,7 +17,7 @@ pipeline {
      stage ('build') {
          
             steps {
-                sh "chmod a+x provition.sh"
+                
                 sh "make build"
                 
             }
