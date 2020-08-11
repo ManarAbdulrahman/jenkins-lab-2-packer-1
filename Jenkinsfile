@@ -18,7 +18,7 @@ pipeline {
          
             steps {
                 
-                sh "packer build $AWS_ACCESS_KEY_ID  $AWS_SECRET_ACCESS_KEY packer.json "
+                sh "packer build packer.json "
                 
             }
         }
