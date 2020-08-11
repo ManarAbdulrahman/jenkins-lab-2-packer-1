@@ -17,7 +17,7 @@ pipeline {
      stage ('build') {
          
             steps {
-                sh "chmod a+x /home/ubuntu/provision.sh"
+                sh "chmod a+x provision.sh"
                 sh "make build"
                 
             }
