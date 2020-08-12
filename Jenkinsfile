@@ -9,6 +9,7 @@ pipeline {
      environment {
         CREDS = credentials('6c22797b-6e23-4779-984c-c18d46aade6b')
         WONER = "MANAR"
+        PROJECT_NAME = 'web-server'
         AWS_ACCESS_KEY_ID= "${CREDS_USR}"
         AWS_SECRET_ACCESS_KEY= "${CREDS_PSW}"
     }
