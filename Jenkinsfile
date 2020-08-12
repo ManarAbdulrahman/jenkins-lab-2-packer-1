@@ -18,7 +18,7 @@ pipeline {
          
             steps {
                 sh "make init"
-                sh "make start"
+                
                 sh "packer build packer.json "
                 
             }
