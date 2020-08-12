@@ -1,3 +1,4 @@
+ 
 all: stop start exec
 
 init:
@@ -9,8 +10,8 @@ start:
 	docker run -it -d \
 		--env TF_NAMESPACE=$$TF_NAMESPACE \
 		--env AWS_PROFILE="kh-labs" \
-		--env AWS_ACCESS_KEY_ID= $${CREDS_USR} \
-		--env AWS_SECRET_ACCESS_KEY= $${CREDS_PSW} \
+		--env AWS_ACCESS_KEY_ID="$$(sed -n 2p creds/credentials | sed 's/.*=//')" \
+		--env AWS_SECRET_ACCESS_KEY="$$(sed -n 3p creds/credentials | sed 's/.*=//')" \
 		--env OWNER=$$OWNER \
 		--env PROJECT_NAME=$$PROJECT_NAME \
 		-v /var/run/docker.sock:/var/run/docker.sock \
