@@ -1,5 +1,4 @@
- 
-all: stop start exec
+ all: stop start exec
 
 init:
 	export PROJECT_NAME="web-server"
